@@ -1,0 +1,26 @@
+{
+  "name": "simplejs",
+  "version": "0.0.1",
+  "description": "Helper package",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hop-/simplejs.git"
+  },
+  "keywords": [
+    "helper",
+    "typescript"
+  ],
+  "author": "hop-",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hop-/simplejs/issues"
+  },
+  "homepage": "https://github.com/hop-/simplejs#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
