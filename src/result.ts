@@ -15,7 +15,7 @@ export type Match<T, E extends Error, Res> = {
 
 type R<T, E extends Error> = [tag: Variant.Ok, value: T] | [tag: Variant.Err, error: E];
 
-export default class Result<T, E extends Error> {
+export class Result<T, E extends Error> {
   // eslint-disable-next-line no-useless-constructor, no-empty-function
   private constructor(private r: R<T, E>) {}
 

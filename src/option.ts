@@ -17,7 +17,7 @@ type R<T> = [tag: Variant.Some, value: T] | [tag: Variant.None]
 
 let NONE: any; // Option<unknown>
 
-export default class Option<T> {
+export class Option<T> {
   // eslint-disable-next-line no-useless-constructor, no-empty-function
   private constructor(private r: R<T>) {}
 
@@ -48,6 +48,14 @@ export default class Option<T> {
       throw new Error('Cannot get the value of \'None\'');
     }
     return this.r[1];
+  }
+
+  isSome(): boolean {
+    return this.r[0] === Variant.Value.Some;
+  }
+
+  isNone(): boolean {
+    return this.r[0] === Variant.Value.None;
   }
 
   match<Res>(matcher: Match<T, Res>): Res {
